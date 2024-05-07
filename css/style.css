@@ -951,3 +951,21 @@ video:focus {
   outline: none;
 }
 
+.dome-website {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 15px;
+  background-color: #1354AE;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+  transform: rotate(50deg);
+}
+
+.dome-website:hover {
+  transform: rotate(0deg);
+}
+
