@@ -898,6 +898,24 @@ label.error {
   position: relative;
 }
 
+.playBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.playBtn h1 {
+  color: white;
+  font-size: 4.5vw;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
 .play {
   display: flex;
   justify-content: center;
@@ -911,10 +929,6 @@ label.error {
   animation: 1.2s cubic-bezier(0.8, 0, 0, 1) 0s infinite normal none running pulse;
   align-items: center;
   border: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 @keyframes pulse {
