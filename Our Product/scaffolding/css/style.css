@@ -112,7 +112,7 @@ figure {
 .page-border .left-border,
 .page-border .right-border,
 .page-border .top-border {
-    background: #f3f3ef;
+    background: #808080;
     position: fixed;
     z-index: 9999;
 }
@@ -122,7 +122,7 @@ figure {
 .page-border>.bottom-border,
 .page-border>.left-border {
     padding: 11px;
-    background:#f0ede6ec;
+    background:#808080;
 }
 
 .page-border .bottom-border,
@@ -388,7 +388,7 @@ section {
 }
 
 #logo img {
-    max-height: 30px;
+    max-height: 40px;
     width: 180px;
     vertical-align: middle;
     margin-right: 15px;
@@ -556,7 +556,7 @@ section {
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+    transition: all 0.3s ease-in-out;
 }
 
 #header.nav-solid nav a:hover {
@@ -572,7 +572,7 @@ section {
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+    transition: all .3s ease-out;
     opacity: 0.5;
 }
 
@@ -950,6 +950,9 @@ h6 {
 .introduction img.featured {
     padding: 55px 0 0 0;
 }
+.introduction p{
+    text-align: justify;
+}
 
 /* --------- 6.2 Features ---------- */
 
@@ -1014,6 +1017,11 @@ blockquote {
 
 #gallery img {
     max-height: 300px;
+}
+#gallery .two img {
+    background-size: cover;
+    background-position: center;
+    height: 450px;
 }
 
 #gallery [class*='col-'] {
@@ -1314,6 +1322,11 @@ blockquote {
     }
 }
 
+#services p{
+   text-align: justify;
+   font-size: 16px;
+}
+
 /* --------- 6.5 Video ---------- */
 
 #video-box {
@@ -1471,6 +1484,134 @@ blockquote {
     text-align: center;
     display: inline-block;
 }
+/*contact us */
+/* mobile view paragraph & contact form*/
+@media (max-width:600px) {
+
+    #clients  .row .contactus{
+        margin-left: 10px !important;
+    }
+    .contactus form {
+        width: 300px !important;
+    }
+    .contactus #name,#email,#number{
+        width: 200px !important;
+        margin-top: 10px;
+    }
+    .contactus #message {
+        max-width: 200px !important;
+        min-width:200px !important;
+        height: 50px;
+    }
+} 
+/* tab view paragraph & contact form */
+
+#clients{
+    width: 100vw;
+
+}
+
+#clients h3 {
+    color: #d2b356;
+    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+    
+}
+#clients .section-heading h2 {
+    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+    font-size: 34px; 
+    font-weight:700;
+    color:#111;
+    
+}
+
+#clients .section-heading p {
+
+    line-height: 39px;
+    font-weight: 500;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+    color:#9c9c9c;
+}
+
+.contactus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:  20px 0px;
+   
+}
+
+.contactus form {
+    padding: 20px;
+    margin: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 20px;
+    width: 600px;
+    padding-top: 40px;
+}
+.contactus #name,#email,#number{
+    width: 500px;
+    margin-top: 10px;
+}
+.contactus #message{
+    max-width: 500px;
+    min-width: 500px;
+    min-height:0px;
+    margin-top: 10px;
+}
+
+.contactus .container form input::placeholder {
+    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+    font-size: 13px !important;
+}
+.contactus #message::placeholder {
+    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+    font-size: 13
+    
+    
+    
+    px !important;
+}
+
+.contactus #message::placeholder {
+    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+}
+
+.glow {
+    display: inline-block;
+    padding: 8px 8px;
+    font-size: 14px;
+    font-weight:500;
+    color: rgb(59, 58, 58);
+    background-color:#d2b356;
+    border: none;
+    border-radius: 5px;
+    margin-top: 25px;
+    cursor: pointer;
+    box-shadow: 0 0 10px#d2b356;
+    animation: glow-animation 0.8s infinite alternate;
+  }
+  .glow:hover{
+     color:#d2b356;
+     background-color: #808080;
+
+  }
+
+  @keyframes glow-animation {
+    from {
+      box-shadow: 0 0 10px rgb(75, 71, 71);
+    }
+    to {
+      box-shadow: 0 0 20px #d2b356;
+    }
+  }
+
 
 
 
@@ -1546,9 +1687,37 @@ blockquote {
 /*------------------------------------------------------------------------------------------*/
 /* 7. Footer */
 /*------------------------------------------------------------------------------------------*/
-
+@media (min-width:505px) and (max-width:766px) {
+    #landing-footer .row{
+        display:flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    #landing-footer .social-icons{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+ } 
+@media (max-width:500px) {
+    #landing-footer .row{
+        display:flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    #landing-footer .social-icons{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+ }
 #landing-footer {
     clear: both;
+    margin: 10px 0px 5px 0px;
 }
 
 #landing-footer .row {
@@ -1557,11 +1726,14 @@ blockquote {
 
 #landing-footer p {
     margin: 0;
+    text-align: center;
 }
 
 #landing-footer ul {
     list-style: none;
-    text-align: right;
+    float:right;
+    margin-bottom: 5px;
+    margin-top: -25px;
 }
 
 #landing-footer li {
@@ -1596,7 +1768,7 @@ blockquote {
 }
 
 #scrollUp:before {
-    background: #ccc;
+    background:#808080;
     font-family: "fontawesome";
     font-size: 2.4em;
     font-style: normal;
@@ -1610,6 +1782,7 @@ blockquote {
     content: "\f106";
     opacity: 1;
 }
+
 
 /*Preloader*/
 

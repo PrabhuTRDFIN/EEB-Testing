@@ -253,7 +253,7 @@ p {
 }
 
 /*banner*/
-@media (max-width:600px) {
+@media (max-width:600px){
     #video1 {
         background-attachment: fixed;
         width: 100%;
@@ -408,6 +408,12 @@ p {
 }
 
 /*gallery block*/
+
+@media (min-width:361px) and (max-width:425px) {
+    #gallery-block .two .img-responsive{
+        height: 160px;
+    }
+}
 .port-image {
     position: relative;
 }
@@ -538,7 +544,9 @@ p {
 }
 
 #contact textarea {
-    height: 180px !important;
+    width: 100%!important;
+    min-height: 160px !important;
+    
 }
 
 #contact .form-control:hover,
@@ -721,7 +729,6 @@ h2 {
     .choose #img2 img {
         width: 300px;
         border-radius: 50px;
-        margin-top: 20px;
         margin-top: 80px !important;
     }
 
@@ -827,17 +834,8 @@ h2 {
 /* --end about section--*/
 
 /*footer*/
-@media (min-width:1025px) and (max-width:2560px){
 
-}
-    
 
-footer {
-    margin-top: 65px;
-    padding: 55px 0;
-    color: #393939;
-
-}
 .copyright1{
     color: white;
     background-color: #000;
@@ -849,7 +847,10 @@ footer {
     bottom: 0;
     margin-top: -5px;
     width: 100vw;
-    margin-left: -20px;
+    margin-left: -15px;
+    overflow-x: hidden;
+
+  
 }
 .copyright {
     color: #000;
@@ -1064,6 +1065,7 @@ footer {
     position: fixed;
     right: 15px;
     text-align: center;
+    transition: all .5s ease-in;
 }
 
 #back-to-top:hover {
@@ -1091,6 +1093,7 @@ footer {
     text-align: center;
     top: 35px;
     z-index: 99999;
+    transition: all .5s ease-in-out;
 }
 
 .follow:hover .label,
@@ -1143,18 +1146,6 @@ footer {
 
 .facebook {
     background-color: #31b0d5;
-}
-
-.twitter {
-    background-color: #00aced;
-}
-
-.google-plus {
-    background-color: #dd4b39;
-}
-
-.pinterest {
-    background-color: #cb2027;
 }
 
 .icon.first {
